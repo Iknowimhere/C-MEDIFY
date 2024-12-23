@@ -4,7 +4,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import SwiperImg1 from '../assets/swiper1.png';
 import SwiperImg2 from '../assets/swiper2.png';
 import SwiperImg3 from '../assets/swiper3.png';
-import { Card, Grid2 as Grid, List, ListItem, ListItemIcon } from '@mui/material';
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import { Card, Grid2 as Grid, List, ListItem, ListItemIcon, Stack } from '@mui/material';
 import ankushImg from '../assets/PngItem_1939059 1.png'
 import {
   Box,
@@ -30,12 +31,15 @@ import MriImg from '../assets/mri.png';
 import PshycoImg from '../assets/pshycologist.png';
 import BloodImg from '../assets/blood.png';
 import XrayImg from '../assets/xray.png';
+import GoalImg1 from '../assets/goalimg1.png';
+import GoalImg2 from '../assets/goalimg2.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import VerifiedIcon from '@mui/icons-material/Verified';
+
 
 const HomePage = () => {
   let theme = useTheme();
@@ -712,14 +716,23 @@ const HomePage = () => {
       {/* goal section */}
       <Box>
         {/* image section */}
-        <Box>
+        <Box sx={{position:"relative"}}>
           {/* image1  */}
           <Box>
-            <img src="" alt="" />
+            <img src={GoalImg1} alt="goal" />
           </Box>
           {/* image2  */}
           <Box>
-            <img src="" alt="" />
+            <img src={GoalImg2} alt="goal" />
+          </Box>
+          <Box>
+            <Box backgroundColor={'#2AA7FF'} padding={'1rem'} textAlign={'center'} color={'#fff'} display={'inline-block'}>
+              <Stack direction={'row'} spacing={1}>
+                <PhoneInTalkIcon/>
+                <Typography variant="subtitle2" >Free Consultation</Typography>
+              </Stack>
+              <Typography variant="subtitle2">Consultation with the best</Typography>
+            </Box>
           </Box>
         </Box>
         {/* text section */}
